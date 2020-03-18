@@ -7,7 +7,7 @@ class CostSlider extends React.Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      cost: 50000
+      cost: 50000,
     }
   }
  
@@ -23,7 +23,7 @@ class CostSlider extends React.Component {
     let { cost } = this.state
     return (
     <div>
-      <p>Principal Amount <span className="principal">€{cost}</span></p>
+      <p>Anlagebetrag <span className="principal">€{cost}</span></p>
       <div className="slider-container">
         <Slider
           value={cost}
@@ -37,9 +37,9 @@ class CostSlider extends React.Component {
         />
       </div>
       <div className="value-card-container">
-        <ValueCard costing = {this.state.cost} plan="Value 30"/>
-        <ValueCard costing = {this.state.cost} plan="Value 60"/>
-        <ValueCard costing = {this.state.cost} plan="Value 100"/>
+        <ValueCard costing = {this.state.cost} plan={30}/>
+        <ValueCard costing = {this.state.cost} plan={60}/>
+        <ValueCard costing = {this.state.cost} plan={100}/>
       </div>
     </div>
     
